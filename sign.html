@@ -6,19 +6,16 @@
 </head>
 <body>
 <script>
-    let x = prompt('Type a number', 0);
-    let sosanh="lonhon";
-    if (x>0) {sosanh="lonhon"};
-    if (x<0) {sosanh="nhohon"};
-    switch (sosanh) {
-        case "lonhon":
+    let x = +prompt('Type a number', 0);
+    switch (Math.abs(x)) {
+        case 0:
+            alert('0');
+            break;
+        case x:
             alert('1');
             break;
-        case "nhohon":
-            alert('-1');
-            break;
         default:
-            alert('0');
+            alert('-1');
             break;
     }
 </script>
